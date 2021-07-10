@@ -1,0 +1,19 @@
+name: Update Link
+
+on:
+  create:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Update link
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update link action step
+        uses: ./ # Use action from root director
