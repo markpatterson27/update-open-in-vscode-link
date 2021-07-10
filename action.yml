@@ -6,7 +6,7 @@ runs:
   steps:
     - run: |
         if [[ -e README.md ]]; then
-          sed -i 's~(https://open.vscode.dev/.*)~(https://open.vscode.dev/${{ github.repository }})~g' README.md
+          sed -i 's~svg)](https://open.vscode.dev/.*)~svg)](https://open.vscode.dev/${{ github.repository }})~g' README.md
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
